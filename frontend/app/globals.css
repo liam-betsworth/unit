@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #0f1014;
+  color: #e6e8ec;
+}
+
+/* Logo theming: allow color adaptation */
+@media (prefers-color-scheme: light) {
+  body {
+    background: #ffffff;
+    color: #111111;
+  }
+  header a img[src*="unit-bracket"] {
+    filter: invert(0); /* ensure dark text color */
+    color: #111111;
+  }
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1b1e24; }
+::-webkit-scrollbar-thumb { background: #343842; border-radius: 4px; }
